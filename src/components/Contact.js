@@ -9,7 +9,9 @@ const Contact = props => (
             <div className="status">
                 <div className= {props.online ? "status-online" : "status-offline"} ></div>
                     <p className= 'status-text'>{props.online ? "online" : "offline"} </p>
+            <p> {props.jghjj} </p>
             </div>
+            
         </div>        
     </div>
     
