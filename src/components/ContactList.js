@@ -1,15 +1,37 @@
 import React from 'react';
 import Contact from './Contact.js';
 
-const tableuser = ["Yolanda Caldwell","Ana Mendoza", "Maurice Perez", "Ellen Garcia", "Stephanie Reed"];
+const list = [
 
-const listeuser = tableuser.map(name => {
-    return name;
-});
+{
+name : "Yolanda Caldwell",
+avatar:"https://randomuser.me/api/portraits/women/63.jpg",
+online : true
 
-const ContactList = props => (
-    <p> {tableuser.map(name => { return <Contact name = {name} jghjj = 'test' />;})} </p>
-)
+},
+{
+name : "Ana Mendoza",
+avatar:"https://randomuser.me/api/portraits/women/84.jpg",
+online : false
+},
+{
+    name : "Maurice Perez", 
+    avatar:"https://randomuser.me/api/portraits/men/23.jpg",
+    online : true
+},
+{
+   name :"Ellen Garcia",
+   avatar:"https://randomuser.me/api/portraits/women/4.jpg",
+   online : true 
+}
+]
 
+const ContactList = () => (
+    <div>
+        {list.map(item => (
+            <Contact name={item.name} avatar={item.avatar} online={item.online}/>
+        ))}
+        </div>
+        )
 
 export default ContactList;
